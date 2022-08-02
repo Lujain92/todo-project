@@ -1,21 +1,27 @@
  let userName=prompt("Enter your name please") ;
  let     userAge=prompt("Enter your age") ;
- let    userGender=prompt("Enter your gender");
-
+ let userGender=prompt("Enter your gender");
  
 function userGender1(userGender){
+     
 
-    if (userGender=="Female" || userGender == "female"){
-        return "Ms"
+    while(true){
+        if (userGender=="female" || userGender == "male"){
+            if (userGender =="female"){
+                return "Ms"
+            }
+            else{
+                return "Mr"
+            }
+    
+    
+        }
+        
+        else{
+            
+        }
+    
 
-
-    }
-    else if (userGender=="Male" || userGender == "male"){
-        return "Mr"
-   
-    }
-    else{
-        return prompt("It should be female or male")
     }
 
 }
@@ -31,11 +37,9 @@ function userAge1(userAge){
     }
 }
 
- let confirm=confirm("do you want a welcome")
+// let confirm=confirm("do you want a welcome")
  
 console.log(userName,userGender1(userGender),userAge1(userAge))
-
-
 
 
  
