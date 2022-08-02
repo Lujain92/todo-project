@@ -1,45 +1,94 @@
- let userName=prompt("Enter your name please") ;
- let     userAge=prompt("Enter your age") ;
- let userGender=prompt("Enter your gender");
- 
-function userGender1(userGender){
-     
+ function userInfo(){
+    
+    let userName=prompt("Enter your name please") ;
 
     while(true){
-        if (userGender=="female" || userGender == "male"){
-            if (userGender =="female"){
-                return "Ms"
-            }
-            else{
-                return "Mr"
-            }
-    
-    
-        }
-        
-        else{
-            
-        }
-    
+        let userGender=prompt("Enter your gender");
+    if (userGender !="male" && userGender != "female"){
 
-    }
-
-}
-
-function userAge1(userAge){
-
-    if (userAge > 0){
-        return userAge
+       alert("the gender is not male or female, you must enter male or female ")
+       continue
     }
     else{
-
-        return alert("The age should above 0")
+        break;
     }
-}
 
-// let confirm=confirm("do you want a welcome")
+    }
+    
+
+    while(true){
+       let  userAge=prompt("Enter your age") ;
+       if (userAge <=0){
+           alert("your age is wrong")
+           continue
+       }
+       else{
+        break;
+
+       }
+
+    }
+    let confirmLetter=confirm("Do you went welcome message?")
+
+    if (confirmLetter==true){
+        if (userGender="female"){
+            alert("Welcome MS"+userName)
+    }
+        else if(userGender=='male'){
+            alert("Wlcome MR"+userName)
+        
+        
+
+
+
+   
+
+
+        }
+        else{
+            alert("Ok")
+        }
+
+  
+       
+
+}  
+    
  
-console.log(userName,userGender1(userGender),userAge1(userAge))
+
+ }
 
 
+
+ //second requirement
+ function threeQuestion(){
+    alert("You must answer with yes or no")
+    array=[];
+    
+    first=prompt("are you single?")
+    second=prompt("do you love cat?")
+    third=prompt("do you live alone?")
+    if (first==" "){
+        first="Invalid"
+
+    
+    }
+
+     array.push(first,second,third)
+     for (let x=0 ; x< array.length;x++){
+        console.log(array[x])
+     }
+
+
+    
+    
+
+ }
+
+userInfo()
+threeQuestion()
+ 
+ 
+ 
+ 
  
