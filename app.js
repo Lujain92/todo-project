@@ -68,16 +68,16 @@
     first=prompt("are you single?")
     second=prompt("do you love cat?")
     third=prompt("do you live alone?")
-    if (first==" "){
-        first="Invalid"
-
-    
-    }
 
      array.push(first,second,third)
      for (let x=0 ; x< array.length;x++){
+        if(array[x]!="yes" && array[x]!="no"){
+            array[x]="invalid"
+        }
         console.log(array[x])
      }
+     
+     
 
 
     
